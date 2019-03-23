@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upgrade</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" >Enviar</button>
+        <!-- Aqui precisamos chamar a VIEW deletar através do seu nome
+          no URLs e passamos como segundo parâmetro o ID do objeto ALUNO-->
+        <a href="{% url 'url_deletar' aluno.id%}">Remover</a>
+    </form>
+</body>
+</html>

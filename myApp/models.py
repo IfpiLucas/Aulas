@@ -5,7 +5,8 @@ class Aluno(models.Model):
     email = models.EmailField()
     dt_nasc = models.DateField()
 
-
+    def __str__(self):
+        return self.nome
 
 class Professor(models.Model):
     nome = models.CharField(max_length=60)

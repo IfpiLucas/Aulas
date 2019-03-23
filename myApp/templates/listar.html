@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alunos</title>
+</head>
+<body>
+    <ul>
+        {% for aluno in alunos %}
+            <li>
+                <a href="{% url 'url_atualizar' aluno.id %}"> {{ aluno.nome }} </a>
+                - {{ aluno.email }} - {{ aluno.dt_nasc }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

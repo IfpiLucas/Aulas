@@ -19,6 +19,12 @@ from myApp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('lista', listaA, name="lista"),
-    path('add',addA),
+    path('listar', listar, name="url_listar"),
+    path('cadastrar', adicionar, name='url_adcionar'),
+
+    #   A seguir temos algumas urls dinâmicas onde passamos
+    # um inteiro por parâmetro que neste caso é a chave primária
+    # de nosso objeto.
+    path('atualizar/<int:pk>', atualizar, name="url_atualizar"),
+    path('deletar/<int:pk>', deletar, name="url_deletar")
 ]

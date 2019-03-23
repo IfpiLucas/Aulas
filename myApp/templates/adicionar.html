@@ -5,12 +5,11 @@
     <title>Adicionar Alunos</title>
 </head>
 <body>
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit" >Enviar</button>
-
-</form>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" >Enviar</button>
+    </form>
 <!---->
 </body>
 </html>
